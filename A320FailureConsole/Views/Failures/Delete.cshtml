@@ -1,0 +1,72 @@
+﻿@model A320FailureConsole.Models.Failure
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Failure</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ParentSystem.ACSystemIDName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParentSystem.ACSystemIDName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FailureName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FailureName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DREF0suffix)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DREF0suffix)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FailValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FailValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FixValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FixValue)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

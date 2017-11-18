@@ -1,0 +1,45 @@
+﻿@model IEnumerable<A320FailureConsole.Models.ACSystem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ACSystemIDName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DREF0prefix)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ACSystemIDName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DREF0prefix)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ACSystemID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ACSystemID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ACSystemID })
+        </td>
+    </tr>
+}
+
+</table>
