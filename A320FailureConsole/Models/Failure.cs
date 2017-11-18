@@ -10,7 +10,7 @@ namespace A320FailureConsole.Models
     {
         public int FailureID { get; set; }
         [Required()]
-        public string Name { get; set; }
+        public string FailureName { get; set; }
         public string Description { get; set; }
         public int ACSystemID { get; set; }
         public virtual ACSystem ParentSystem { get; set; }
