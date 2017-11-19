@@ -10,10 +10,13 @@ namespace A320FailureConsole.Models
     {
         public int ACSystemID { get; set; }
         [Required()]
+        [Display(Name = "System Name")]
         public string ACSystemIDName { get; set; }
         public string Description { get; set; }
         [Required()]
         public string DREF0prefix { get; set; }
+        [Display(Name = "Failures")]
+        public List<int> FailureID { get; set; }
         public virtual List<Failure> Failures { get; set; }
     }
 }
