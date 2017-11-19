@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using A320FailureConsole.Models;
+using AspNet.Security.OAuth.Twitch;
 
 namespace A320FailureConsole
 {
@@ -34,7 +35,7 @@ namespace A320FailureConsole
                         validateInterval: TimeSpan.FromMinutes(30),
                         regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager))
                 }
-            });            
+            });
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
 
             // Enables the application to temporarily store user information when they are verifying the second factor in the two-factor authentication process.
@@ -54,15 +55,16 @@ namespace A320FailureConsole
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "149532529003414",
+               appSecret: "9d1b6d95ae69c0e902f9c668cb0f2b45");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "235339246715-vnedtuepob25885gf10quqrfoao7ff3o.apps.googleusercontent.com",
+                ClientSecret = "zg35_E-LMgbKvEC2c9kOo3Z1"
+            });
+
         }
     }
 }
