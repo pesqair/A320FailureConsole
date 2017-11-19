@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using A320FailureConsole.Models;
+using Zetlon.OAuth.Twitch;
 
 namespace A320FailureConsole
 {
@@ -63,6 +64,7 @@ namespace A320FailureConsole
             //    ClientId = "",
             //    ClientSecret = ""
             //});
-        }
+
+         
     }
 }
