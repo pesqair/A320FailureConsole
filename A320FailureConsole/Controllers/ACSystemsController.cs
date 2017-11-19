@@ -36,7 +36,7 @@ namespace A320FailureConsole.Controllers
         }
 
         // GET: ACSystems/Create
-        [Authorize()]
+        //[Authorize()]
         public ActionResult Create()
         {
             return View();
