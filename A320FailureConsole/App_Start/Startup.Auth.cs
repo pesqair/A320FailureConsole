@@ -6,7 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using A320FailureConsole.Models;
-using Zetlon.OAuth.Twitch;
+using AspNet.Security.OAuth.Twitch;
 
 namespace A320FailureConsole
 {
@@ -35,7 +35,7 @@ namespace A320FailureConsole
                         validateInterval: TimeSpan.FromMinutes(30),
                         regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager))
                 }
-            });            
+            });
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
 
             // Enables the application to temporarily store user information when they are verifying the second factor in the two-factor authentication process.
@@ -65,6 +65,6 @@ namespace A320FailureConsole
             //    ClientSecret = ""
             //});
 
-         
+        }
     }
 }

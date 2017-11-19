@@ -55,6 +55,9 @@
     <Reference Include="AspNet.Security.OAuth.Twitch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=fa9e7b608b196fab, processorArchitecture=MSIL">
       <HintPath>..\packages\AspNet.Security.OAuth.Twitch.1.0.0-rc1-final\lib\net451\AspNet.Security.OAuth.Twitch.dll</HintPath>
     </Reference>
+    <Reference Include="Auth0.Owin, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Auth0-ASPNET-Owin.2.3.0\lib\net45\Auth0.Owin.dll</HintPath>
+    </Reference>
     <Reference Include="DotNetOpenAuth.AspNet, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
       <HintPath>..\packages\DotNetOpenAuth.AspNet.4.3.4.13329\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
     </Reference>
