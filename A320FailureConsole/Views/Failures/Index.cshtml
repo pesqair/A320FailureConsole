@@ -1,26 +1,27 @@
 ﻿@model IEnumerable<A320FailureConsole.Models.Failure>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Failures List";
 }
 
-<h2>Index</h2>
+<h2>Failures List</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ParentSystem.ACSystemIDName)
-        </th>
+       
         <th>
             @Html.DisplayNameFor(model => model.FailureName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayNameFor(model => model.ParentSystem.ACSystemIDName)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        @*<th>
             @Html.DisplayNameFor(model => model.DREF0suffix)
         </th>
         <th>
@@ -28,22 +29,23 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.FixValue)
-        </th>
+        </th>*@
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ParentSystem.ACSystemIDName)
-        </td>
+
         <td>
             @Html.DisplayFor(modelItem => item.FailureName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Description)
+            @Html.DisplayFor(modelItem => item.ParentSystem.ACSystemIDName)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.DREF0suffix)
         </td>
         <td>
@@ -51,7 +53,7 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.FixValue)
-        </td>
+        </td>*@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.FailureID }) |
             @Html.ActionLink("Details", "Details", new { id=item.FailureID }) |
