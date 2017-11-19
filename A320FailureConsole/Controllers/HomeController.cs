@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace A320FailureConsole.Controllers
 {
+    [RequireHttps]
     public class HomeController : Controller
     {
         public ActionResult Index()
