@@ -18,7 +18,7 @@
             @Html.DisplayNameFor(model => model.Description)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DREF0prefix)
+            @Html.DisplayNameFor(model => model.FailureID)
         </th>
         <th></th>
     </tr>
@@ -32,7 +32,12 @@
             @Html.DisplayFor(modelItem => item.Description)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DREF0prefix)
+            @foreach (var item2 in item.Failures)
+            {
+                @Html.DisplayFor(modelItem2 => item2.FailureName)
+                <br />
+            }
+          
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ACSystemID }) |
